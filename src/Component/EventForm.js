@@ -1,22 +1,27 @@
+import './UI/EventForm.css'
+
 export default function EventForm() {
-  return (<form className="event-form">
+  return (
+    <form>
+      <div className="event-form">
 
-    <div>
-      <input
-        type="text" />
-    </div>
+          <div className="event-form__input">
+            <input
+              type="text" />
+          </div>
 
-    <div>
-      <input
-        type="date" />
-    </div>
+          <div className="event-form__input">
+            <input
+              type="date" />
+        </div>
 
-    <div>
-      <button
-        type="submit">Search</button>
-    </div>
+        <div className="event-form__btn">
+          <button
+            type="submit">Search</button>
+        </div>
 
-  </form>
+      </div>
+    </form>
   )
 
 }
