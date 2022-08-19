@@ -7,6 +7,11 @@
   gap: 1rem;
 }
 
-.event-form__btn {}
-
-.event-form__outer {}
+.event-form__input input {
+  font: inherit;
+  padding: 1rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}

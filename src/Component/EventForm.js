@@ -5,14 +5,17 @@ export default function EventForm() {
     <form>
       <div className="event-form">
 
-          <div className="event-form__input">
-            <input
-              type="text" />
-          </div>
+        <div className="event-form__input">
+          <input
+            type="text"
+            placeholder='City' />
+        </div>
 
-          <div className="event-form__input">
-            <input
-              type="date" />
+
+        <div className="event-form__input">
+          <input
+            type="date"
+          />
         </div>
 
         <div className="event-form__btn">
