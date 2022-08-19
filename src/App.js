@@ -3,7 +3,9 @@ import EventForm from './Component/EventForm';
 
 function App() {
   return (
-<EventForm />
+    <>
+      <EventForm />
+    </>
   );
 }
 
