@@ -1,10 +1,10 @@
 import './App.css';
-import EventForm from './Component/EventForm';
+import Home from './component/Home'
 
 function App() {
   return (
     <>
-      <EventForm />
+      <Home />
     </>
   );
 }
