@@ -1,0 +1,49 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  margin-left: 95px;
+}
+
+.form input {
+  border: none;
+  -moz-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.name-input {
+  border-radius: 1px solid black;
+  padding: 20px 70px 20px 20px;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.event-input {
+  padding: 20px 80px 20px 20px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.date-input {
+  padding: 19px 40px 19px 20px;
+}
+
+.location-input {
+  padding: 20px 40px 20px 20px;
+}
+
+button {
+  background-color: #afffb5;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 20px;
+  color: #1f1f1f;
+  position: relative;
+  right: 95px;
+  margin-top: 11px;
+}
+
+button:hover {
+  cursor: pointer;
+}

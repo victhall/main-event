@@ -8,9 +8,10 @@ export default function Home() {
         <div className={classes['aurora-inner']}>
           <h1>Main Event.</h1>
           <h2>Concerts. Sports.<br />Arts &amp; Theatre</h2>
+          <SeachBar />
+
         </div>
       </div>
-      <SeachBar />
     </>
   )
 }
