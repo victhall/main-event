@@ -1,0 +1,41 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
+
+img {
+  height: 200px;
+  width: 340px;
+  border-radius: 12px;
+}
+
+.event-card {
+padding: 25px 0px 25px 60px;
+}
+
+.event-details {
+  background-color: white;
+  border-radius: 20px;
+  width: 340px;
+  height: auto;
+  position: absolute;
+  bottom: 13px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.event-details h3 {
+  font-family: 'Inter Tight', sans-serif;
+  margin: 0;
+  padding: 15px 10px 10px 25px;
+}
+
+.event-details p {
+  margin: 0;
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.date {
+  padding: 3px 10px 15px 25px;
+  color: #9f9f9f;
+}
+
+.venue {
+  padding: 0 10px 10px 25px;
+} */

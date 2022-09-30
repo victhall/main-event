@@ -1,6 +1,9 @@
 import classes from './Home.module.css'
 import SeachBar from './SearchBar'
 import Events from './Events'
+import ConcertEventList from './ConcertEventList'
+import SportEvents from './SportEvents'
+import ArtsTheatreEvents from './ArtsTheatreEvents'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -17,16 +20,16 @@ export default function Home() {
   // }, [])
 
   async function getEventData(enteredCity, enteredDate) {
-    console.log('ENTERED DATE', enteredDate)
     try {
       const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?city=${enteredCity}&localStartDateTime=${enteredDate}&apikey=${process.env.REACT_APP_TM_API_KEY}`)
       const data = response.data._embedded.events;
       console.log(data);
-      setEventData(data);
+      setEventData([...data]);
     } catch (error) {
       console.error(error)
-    }
-  }
+    };
+  };
+  console.log('EVENT DATA PLZZ', eventData)
 
   return (
     <>
@@ -38,8 +41,12 @@ export default function Home() {
         </div>
       </div>
       <Events />
+
+      {eventData && eventData.map((event) => (
+        <ConcertEventList
+          event={event}
+        />
+      ))}
     </>
   )
 }
-
-// localStartDateTime

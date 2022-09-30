@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import classes from './SearchBar.module.css'
-import moment from 'moment';
 
 export default function SeachBar(props) {
   const [enteredCity, setEnteredCity] = useState('');
@@ -8,7 +7,7 @@ export default function SeachBar(props) {
 
 
   const dateChangeHandler = function (e) {
-    let date = e.target.value;
+    const date = e.target.value;
     const startTime = `T00:00:00`;
     const endTime = `T23:59:59`;
     const localStartDateTime = `${date}${startTime},${date}${endTime}`
@@ -43,7 +42,7 @@ export default function SeachBar(props) {
           value={enteredDate}
           onChange={dateChangeHandler}
         />
-        <button>Search</button>
+        <button className={classes['search-btn']}>Search</button>
       </form>
     </div>
   )
