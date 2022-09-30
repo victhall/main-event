@@ -1,27 +1,38 @@
+import { useState } from 'react'
 import classes from './SearchBar.module.css'
-export default function SeachBar() {
+
+export default function SeachBar(props) {
+  const [enteredCity, setEnteredCity] = useState('');
+  const [enteredDate, setEnteredDate] = useState('');
+
+  const cityChangeHandler = function(e) {
+    setEnteredCity(e.target.value);
+
+  }
+
+  const submitHandler = function (e) {
+    e.preventDefault();
+
+    props.search(enteredCity)
+    setEnteredCity('');
+
+  }
+
+
   return (
     <div className={classes.form}>
-      <form>
+      <form onSubmit={submitHandler}>
         <input
-          className={classes['name-input']}
-          placeholder='Search by name'
+          className={classes['city-input']}
+          placeholder='City'
           type='text'
+          value={enteredCity}
+          onChange={cityChangeHandler}
         />
-        <input
-        className={classes['date-input']}
+        {/* <input
+          className={classes['date-input']}
           type='date'
-        />
-        <input
-        className={classes['location-input']}
-          placeholder='Location'
-          type='text'
-        />
-        <input
-        className={classes['event-input']}
-          placeholder='Type of event'
-          type='text'
-        />
+        /> */}
         <button>Search</button>
       </form>
     </div>

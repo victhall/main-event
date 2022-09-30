@@ -12,7 +12,7 @@
   box-shadow: 0 0 3px #ccc;
 }
 
-.name-input {
+.city-input {
   border-radius: 1px solid black;
   padding: 20px 70px 20px 20px;
   border-bottom-left-radius: 50px;
@@ -21,16 +21,13 @@
 
 .event-input {
   padding: 20px 80px 20px 20px;
-  border-bottom-right-radius: 50px;
-  border-top-right-radius: 50px;
+
 }
 
 .date-input {
-  padding: 19px 40px 19px 20px;
-}
-
-.location-input {
-  padding: 20px 40px 20px 20px;
+  padding: 19px 120px 19px 20px;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 button {
