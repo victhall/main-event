@@ -1,23 +1,31 @@
 import { useState } from 'react'
 import classes from './SearchBar.module.css'
+import moment from 'moment';
 
 export default function SeachBar(props) {
   const [enteredCity, setEnteredCity] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
-  const cityChangeHandler = function(e) {
-    setEnteredCity(e.target.value);
 
-  }
+  const dateChangeHandler = function (e) {
+    let date = e.target.value;
+    const startTime = `T00:00:00`;
+    const endTime = `T23:59:59`;
+    const localStartDateTime = `${date}${startTime},${date}${endTime}`
+    setEnteredDate(localStartDateTime);
+  };
+
+  const cityChangeHandler = function (e) {
+    setEnteredCity(e.target.value);
+  };
 
   const submitHandler = function (e) {
     e.preventDefault();
 
-    props.search(enteredCity)
+    props.onSearch(enteredCity, enteredDate);
     setEnteredCity('');
-
-  }
-
+    setEnteredDate('');
+  };
 
   return (
     <div className={classes.form}>
@@ -29,10 +37,12 @@ export default function SeachBar(props) {
           value={enteredCity}
           onChange={cityChangeHandler}
         />
-        {/* <input
+        <input
           className={classes['date-input']}
           type='date'
-        /> */}
+          value={enteredDate}
+          onChange={dateChangeHandler}
+        />
         <button>Search</button>
       </form>
     </div>

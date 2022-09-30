@@ -1,12 +1,11 @@
 import classes from './Home.module.css'
 import SeachBar from './SearchBar'
 import Events from './Events'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 export default function Home() {
-  const [eventData, setEventData] = useState([])
-
+  const [eventData, setEventData] = useState([]);
 
   // useEffect(() => {
   //   async function getEventData() {
@@ -17,17 +16,17 @@ export default function Home() {
   //   getEventData()
   // }, [])
 
-  const search = (enteredCity) => {
-axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${process.env.REACT_APP_TM_API_KEY}&city=${enteredCity}`)
-.then(response => {
-  const info = response.data
-  console.log(info)
-  setEventData(info)
-}).catch(error => {
-  console.log(error)
-})
+  async function getEventData(enteredCity, enteredDate) {
+    console.log('ENTERED DATE', enteredDate)
+    try {
+      const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?city=${enteredCity}&localStartDateTime=${enteredDate}&apikey=${process.env.REACT_APP_TM_API_KEY}`)
+      const data = response.data._embedded.events;
+      console.log(data);
+      setEventData(data);
+    } catch (error) {
+      console.error(error)
+    }
   }
-
 
   return (
     <>
@@ -35,7 +34,7 @@ axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?apikey=${proces
         <div className={classes['aurora-inner']}>
           <h1>Main Event.</h1>
           <h2>Concerts. Sports.<br />Arts &amp; Theatre</h2>
-          <SeachBar search={search}/>
+          <SeachBar onSearch={getEventData} />
         </div>
       </div>
       <Events />
