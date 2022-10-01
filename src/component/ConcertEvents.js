@@ -1,4 +1,4 @@
-import classes from './ConcertEvents.module.css'
+import classes from './Events.module.css'
 import { GoLocation } from "react-icons/go";
 import { FiClock } from "react-icons/fi";
 

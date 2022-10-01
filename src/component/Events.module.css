@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
 
-.title {
-  margin-top: 30px;
-  font-family: 'Inter Tight', sans-serif;
-  font-size: 40px;
-  font-weight: 400;
+img {
+  height: 220px;
+  width: 320px;
 }

@@ -14,6 +14,7 @@ export default function ConcertEventList({ event }) {
     <div className={classes['event-list__container']}>
       {concerts.map((concert) => {
         return <ConcertEvents
+        key={concert.id}
           genre={concert.classifications[0].segment.name}
           venue={concert._embedded.venues[0].name}
           date={concert.dates.start.localDate}

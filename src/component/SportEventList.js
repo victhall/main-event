@@ -14,6 +14,7 @@ export default function SportEventList({ event }) {
     <div className={classes['event-list__container']}>
       {sports.map((sport) => {
         return <SportEvents
+        key={sport.id}
           genre={sport.classifications[0].segment.name}
           venue={sport._embedded.venues[0].name}
           date={sport.dates.start.localDate}

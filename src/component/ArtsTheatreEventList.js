@@ -14,6 +14,7 @@ export default function ArtsTheatreEventList({ event }) {
     <div className={classes['event-list__container']}>
       {artsTheatre.map((artTheatre) => {
         return <ArtsTheatreEvents
+        key={artTheatre.id}
           genre={artTheatre.classifications[0].segment.name}
           venue={artTheatre._embedded.venues[0].name}
           date={artTheatre.dates.start.localDate}

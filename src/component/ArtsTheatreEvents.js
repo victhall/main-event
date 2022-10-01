@@ -1,7 +1,6 @@
-import classes from './SportEventList.module.css'
+import classes from './Events.module.css'
 
 export default function ArtTheatreEvents(props) {
-  console.log('props', props)
   return (
     <div className={classes['event-container']}>
         <h1>ARTSSS THEATRE</h1>

@@ -6,11 +6,11 @@ export default function SeachBar(props) {
   const [enteredDate, setEnteredDate] = useState('');
 
   const dateChangeHandler = function (e) {
-    const date = e.target.value;
-    const startTime = `T00:00:00`;
-    const endTime = `T23:59:59`;
-    const localStartDateTime = `${date}${startTime},${date}${endTime}`
-    setEnteredDate(localStartDateTime);
+    // const date = e.target.value;
+    // const startTime = `T00:00:00`;
+    // const endTime = `T23:59:59`;
+    // const localStartDateTime = `${date}${startTime},${date}${endTime}`
+    setEnteredDate(e.target.value);
   };
 
   const cityChangeHandler = function (e) {
