@@ -2,8 +2,8 @@ import classes from './Home.module.css'
 import SeachBar from './SearchBar'
 import Events from './Events'
 import ConcertEventList from './ConcertEventList'
-import SportEvents from './SportEvents'
-import ArtsTheatreEvents from './ArtsTheatreEvents'
+import SportEventList from './SportEventList'
+import ArtsTheatreEventList from './ArtsTheatreEventList'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
@@ -31,13 +31,13 @@ export default function Home() {
   };
   // console.log('EVENT DATA PLZZ', eventData)
 
-//  const events = eventData.map((event) => {
-//     let concerts = []
-//     if (event.classifications[0].segment.name === 'music') {
-//       concerts.push(event)
-//     }
-//     return concerts
-//   })
+  //  const events = eventData.map((event) => {
+  //     let concerts = []
+  //     if (event.classifications[0].segment.name === 'music') {
+  //       concerts.push(event)
+  //     }
+  //     return concerts
+  //   })
 
 
 
@@ -50,7 +50,13 @@ export default function Home() {
           <SeachBar onSearch={getEventData} />
         </div>
       </div>
-      <Events />
+
+      {eventData &&
+        <SportEventList
+          event={eventData} />}
+
+      {eventData && <ArtsTheatreEventList
+        event={eventData} />}
 
 
       {/* {eventData && eventData.map((event) => {
@@ -63,14 +69,14 @@ export default function Home() {
       })} */}
 
 
-{/* //PREV WOKRING ONE */}
+      {/* //PREV WOKRING ONE */}
       {/* {eventData && eventData.map((event) => (
         <ConcertEventList
           event={event}
         />
       ))} */}
 
-      {eventData && 
+      {eventData &&
         <ConcertEventList
           event={eventData}
         />
