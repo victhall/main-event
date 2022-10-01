@@ -12,7 +12,6 @@ export default function ConcertEventList({ event }) {
     // console.log('concerts', concerts)
     return concerts
   })
-  console.log('concerts', concerts)
 
   return (
     <div className={classes['event-list__container']}>

@@ -5,7 +5,6 @@ export default function SeachBar(props) {
   const [enteredCity, setEnteredCity] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
-
   const dateChangeHandler = function (e) {
     const date = e.target.value;
     const startTime = `T00:00:00`;

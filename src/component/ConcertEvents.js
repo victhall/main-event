@@ -4,7 +4,6 @@ import { FiClock } from "react-icons/fi";
 
 export default function ConcertEvents(props) {
   // console.log('props', props.concert)
-  console.log('props', props)
   return (
     <div className={classes['event-container']}>
         <h1>CONCERTSSSSS</h1>

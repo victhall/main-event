@@ -11,7 +11,6 @@ export default function SportEventList({event}) {
     // console.log('sports', sports)
     return sports
   })
-  console.log('sports', sports)
 
   return (
     <div className={classes['event-list__container']}>

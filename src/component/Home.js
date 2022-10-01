@@ -23,24 +23,14 @@ export default function Home() {
     try {
       const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?city=${enteredCity}&localStartDateTime=${enteredDate}&apikey=${process.env.REACT_APP_TM_API_KEY}`)
       const data = response.data._embedded.events;
-      // console.log(data);
-      setEventData([...data]);
+      const uniqueEvents = [];
+      data.map(x => uniqueEvents.filter(y => y.name == x.name).length > 0 ? null : uniqueEvents.push(x));
+      setEventData([...uniqueEvents]);
     } catch (error) {
       console.error(error)
     };
   };
-  // console.log('EVENT DATA PLZZ', eventData)
-
-  //  const events = eventData.map((event) => {
-  //     let concerts = []
-  //     if (event.classifications[0].segment.name === 'music') {
-  //       concerts.push(event)
-  //     }
-  //     return concerts
-  //   })
-
-
-
+  
   return (
     <>
       <div className={classes['aurora-outer']}>
@@ -50,47 +40,15 @@ export default function Home() {
           <SeachBar onSearch={getEventData} />
         </div>
       </div>
-
+      {eventData &&
+        <ConcertEventList
+          event={eventData} />}
       {eventData &&
         <SportEventList
           event={eventData} />}
-
-      {eventData && <ArtsTheatreEventList
-        event={eventData} />}
-
-
-      {/* {eventData && eventData.map((event) => {
-        let concerts = []
-        if (event.classifications[0].segment.name === 'music') {
-          concerts.push(event)
-          console.log('concerts inside', concerts)
-        }
-        <ConcertEventList concerts={concerts} />
-      })} */}
-
-
-      {/* //PREV WOKRING ONE */}
-      {/* {eventData && eventData.map((event) => (
-        <ConcertEventList
-          event={event}
-        />
-      ))} */}
-
       {eventData &&
-        <ConcertEventList
-          event={eventData}
-        />
-      }
-
-      {/* {eventData && eventData.filter((event) => {
-        if (event.classifications[0].segment.name === 'Music') {
-          return event
-        }
-      }).map((event) => {
-        <ConcertEventList
-          event={event}
-        />
-      })} */}
+        <ArtsTheatreEventList
+          event={eventData} />}
     </>
   )
 }

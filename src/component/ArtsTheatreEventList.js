@@ -11,7 +11,6 @@ export default function ArtsTheatreEventList({event}) {
     // console.log('artsTheatre', artsTheatre)
     return artsTheatre
   })
-  console.log('artsTheatre', artsTheatre)
 
   return (
     <div className={classes['event-list__container']}>
