@@ -1,12 +1,31 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
 
 img {
-  height: 200px;
-  width: 340px;
-  border-radius: 12px;
+  height: 220px;
+  width: 320px;
 }
 
-.event-card {
+.event-container {
+  width: 270px;
+  height: auto;
+  margin: 80px;
+}
+
+.event-details h1 {
+padding: 0;
+font-size: 20px;
+font-family: 'Inter Tight', sans-serif;
+}
+
+.event-details {
+  border: 1px solid grey;
+  width: 318px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+/* 
+.event-container {
 padding: 25px 0px 25px 60px;
 }
 
