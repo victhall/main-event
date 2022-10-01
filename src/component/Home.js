@@ -27,10 +27,10 @@ export default function Home() {
       data.map(x => uniqueEvents.filter(y => y.name == x.name).length > 0 ? null : uniqueEvents.push(x));
       setEventData([...uniqueEvents]);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     };
   };
-  
+
   return (
     <>
       <div className={classes['aurora-outer']}>
