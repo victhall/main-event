@@ -1,18 +1,16 @@
 import ConcertEvents from './ConcertEvents';
-import classes from './EventList.module.css'
+import classes from './EventList.module.css';
 
 export default function ConcertEventList({ event }) {
   let concerts = [];
-
   event.map((e) => {
     if (e.classifications[0].segment.name === 'Music') {
       concerts.push(e);
     };
-    return concerts
+    return concerts;
   });
 
   return (
-    <>    
     <div className={classes['event-list__container']}>
       {concerts.map((concert) => {
         return <ConcertEvents
@@ -27,7 +25,5 @@ export default function ConcertEventList({ event }) {
         />
       })}
     </div>
-    </>
-
-  )
-}
+  );
+};

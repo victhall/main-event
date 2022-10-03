@@ -51,10 +51,12 @@
     margin-left: 0px;
     margin-bottom: 5px;
   }
+
   .date-input {
     padding: 15px;
     border-radius: 50px;
   }
+
   .form {
     display: flex;
     flex-direction: column;
@@ -62,11 +64,13 @@
     margin-left: 0px;
     margin-top: 70px;
   }
+
   form {
     display: flex;
     flex-direction: column;
     margin: 0px 50px;
   }
+
   .search-btn {
     font-family: 'Inter Tight', sans-serif;
     background-color: #afffb5;
@@ -77,4 +81,4 @@
     right: 0px;
     margin-top: 15px;
   }
-  }
+}

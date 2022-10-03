@@ -32,6 +32,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -53,19 +54,23 @@
 
 @keyframes aurora {
   0% {
-      background-position: left top;
+    background-position: left top;
   }
+
   25% {
-      background-position: right top;
+    background-position: right top;
   }
+
   50% {
-      background-position: right bottom;
+    background-position: right bottom;
   }
+
   75% {
-      background-position: left bottom;
+    background-position: left bottom;
   }
+
   100% {
-      background-position: left top;
+    background-position: left top;
   }
 }
 
@@ -87,13 +92,14 @@ h2 {
 }
 
 @media only screen and (max-width: 675px) {
-h2 {
-  font-size: 55px;
-  padding: 20px 40px;
-  margin: 30px 0 30px 0;
-}
-h1 {
-  margin: 0;
-  padding: 20px 40px;
-}
+  h2 {
+    font-size: 55px;
+    padding: 20px 40px;
+    margin: 30px 0 30px 0;
+  }
+
+  h1 {
+    margin: 0;
+    padding: 20px 40px;
+  }
 }

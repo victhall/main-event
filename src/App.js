@@ -3,7 +3,8 @@ import Home from './component/Home'
 
 function App() {
   return (
-    <>    <div className='aurora-outer'>
+    <>    
+    <div className='aurora-outer'>
       <div className='aurora-inner'>
         <h1>Main Event.</h1>
         <h2>Concerts. Sports.<br />Arts &amp; Theatre</h2>
@@ -11,7 +12,6 @@ function App() {
       </div>
     </div>
     </>
-
   );
 }
 

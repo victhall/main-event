@@ -1,5 +1,5 @@
-import classes from './EventList.module.css'
-import SportEvents from './SportEvents'
+import classes from './EventList.module.css';
+import SportEvents from './SportEvents';
 
 export default function SportEventList({ event }) {
   let sports = [];
@@ -14,7 +14,7 @@ export default function SportEventList({ event }) {
     <div className={classes['event-list__container']}>
       {sports.map((sport) => {
         return <SportEvents
-        key={sport.id}
+          key={sport.id}
           genre={sport.classifications[0].segment.name}
           venue={sport._embedded.venues[0].name}
           date={sport.dates.start.localDate}
@@ -25,5 +25,5 @@ export default function SportEventList({ event }) {
         />
       })}
     </div>
-  )
-}
+  );
+};
