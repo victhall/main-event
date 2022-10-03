@@ -25,6 +25,7 @@ export default function ArtsTheatreEventList({ event }) {
           image={artTheatre.images[1].url}
         />
       })}
+
     </div>
   )
 }
