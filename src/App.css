@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.aurora-outer {
+  background: linear-gradient(30deg, #ade2ff 0%, #baafff 50%, #afffb5 100%);
+  background-size: 200%;
+  animation: aurora 10s infinite;
+  height: 100vh;
+}
+
+.aurora-inner {
+  background: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15));
+  background-size: 200%;
+  animation: aurora 7s infinite;
+  height: 100vh;
+}
+
+@keyframes aurora {
+  0% {
+      background-position: left top;
+  }
+  25% {
+      background-position: right top;
+  }
+  50% {
+      background-position: right bottom;
+  }
+  75% {
+      background-position: left bottom;
+  }
+  100% {
+      background-position: left top;
+  }
+}

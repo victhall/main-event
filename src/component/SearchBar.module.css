@@ -3,7 +3,8 @@
 .form {
   display: flex;
   justify-content: center;
-  margin-top: 75px;
+  align-content: center;
+  margin-top: 90px;
   margin-left: 95px;
 }
 
@@ -23,7 +24,6 @@
 
 .event-input {
   padding: 20px 80px 20px 20px;
-
 }
 
 .date-input {
@@ -47,3 +47,4 @@
 .search-btn:hover {
   cursor: pointer;
 }
+

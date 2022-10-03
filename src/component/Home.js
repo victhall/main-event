@@ -5,6 +5,7 @@ import SportEventList from './SportEventList'
 import ArtsTheatreEventList from './ArtsTheatreEventList'
 import { useState } from 'react'
 import axios from 'axios'
+import { BsChevronCompactDown } from "react-icons/bs";
 
 export default function Home() {
   const [eventData, setEventData] = useState([]);
@@ -18,8 +19,9 @@ export default function Home() {
       const response = await axios.get(`https://app.ticketmaster.com/discovery/v2/events.json?city=${enteredCity}&localStartDateTime=${localStartDateTime}&apikey=${process.env.REACT_APP_TM_API_KEY}`)
       const data = response.data._embedded.events;
       const uniqueEvents = [];
-      data.map(x => uniqueEvents.filter(y => y.name == x.name).length > 0 ? null : uniqueEvents.push(x));
+      data.map(x => uniqueEvents.filter(y => y.name === x.name).length > 0 ? null : uniqueEvents.push(x));
       setEventData([...uniqueEvents]);
+      console.log(uniqueEvents)
     } catch (error) {
       console.error(error);
     };
@@ -27,19 +29,18 @@ export default function Home() {
 
   return (
     <>
-      <div className={classes['aurora-outer']}>
-        <div className={classes['aurora-inner']}>
-          <h1>Main Event.</h1>
-          <h2>Concerts. Sports.<br />Arts &amp; Theatre</h2>
-          <SeachBar onSearch={getEventData} />
-        </div>
+      <SeachBar onSearch={getEventData} />
+      <div className={classes['btn-thing']}>
+        <BsChevronCompactDown className={classes['scroll-icon']} />
       </div>
       {eventData &&
         <ConcertEventList
           event={eventData} />}
+
       {eventData &&
         <SportEventList
           event={eventData} />}
+
       {eventData &&
         <ArtsTheatreEventList
           event={eventData} />}

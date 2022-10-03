@@ -1,6 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap');
 
 img {
-  height: 220px;
-  width: 320px;
+  height: 270px;
+  width: 300px;
+  margin-bottom: 3px;
+}
+
+.event-details {
+  width: 300px;
+  height: 170px;
+}
+
+.event-details h1 {
+  padding: 0px;
+  font-size: 18px;
+  padding: 10px 10px 0px;
+  color: #272727;
+}
+
+.event-details p {
+  font-family: 'Inter Tight', sans-serif;
+}
+
+.event-container {
+  margin: 50px 15px;
+  border: 1.5px solid rgb(212 212 216);
+  cursor: pointer;
+}
+
+.event-container:hover {
+  border: 1.5px solid rgb(17 24 39);
+  cursor: pointer;
+}
+
+.venue {
+  font-weight: 500;
+  padding: 0px 10px;
+  margin: 10px 0 0 0;
+  color: #272727;
+}
+
+.time {
+  font-weight: 500;
+  padding: 0px 10px;
+  margin: 5px 0;
+  color: #262626a6;
+}
+
+.genre-music {
+  background-color: #272727;
+  display: inline;
+  color: #ffff;
+  padding: 3px 10px;
+  border-radius: 3px;
+ margin: 3px;
+}
+
+.genre-art {
+  background-color: #272727;
+  display: inline;
+  color: #ffff;
+  padding: 3px 10px;
+  border-radius: 3px;
+ margin: 3px;
+}
+
+.genre-sports {
+  background-color: #272727;
+  display: inline;
+  color: #ffff;
+  padding: 3px 10px;
+  border-radius: 3px;
+ margin: 3px;
 }

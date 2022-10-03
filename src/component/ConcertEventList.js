@@ -1,5 +1,5 @@
 import ConcertEvents from './ConcertEvents';
-import classes from './ConcertEventList.module.css'
+import classes from './EventList.module.css'
 
 export default function ConcertEventList({ event }) {
   let concerts = [];
@@ -11,6 +11,7 @@ export default function ConcertEventList({ event }) {
   });
 
   return (
+    <>    
     <div className={classes['event-list__container']}>
       {concerts.map((concert) => {
         return <ConcertEvents
@@ -25,5 +26,7 @@ export default function ConcertEventList({ event }) {
         />
       })}
     </div>
+    </>
+
   )
 }

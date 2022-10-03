@@ -1,4 +1,4 @@
-import classes from './SportEventList.module.css'
+import classes from './EventList.module.css'
 import SportEvents from './SportEvents'
 
 export default function SportEventList({ event }) {

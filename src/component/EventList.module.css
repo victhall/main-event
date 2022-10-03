@@ -1,0 +1,6 @@
+.event-list__container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  overflow: scroll;
+}

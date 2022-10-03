@@ -30,9 +30,22 @@
   }
 }
 
-div {
-  display: block;
-  height: 50vh;
+.btn-thing {
+  text-align: center;
+  padding-top: 220px;
+}
+
+.scroll-icon {
+  font-size: 100px;
+}
+
+.scroll-icon:hover {
+  cursor: pointer;
+  -moz-transform: scale(1.2); 
+  -webkit-transform: scale(1.2); 
+  -o-transform: scale(1.2); 
+  -ms-transform: scale(1.2); 
+  transform: scale(1.2);
 }
 
 h1 {
@@ -46,7 +59,7 @@ h1 {
 
 h2 {
   padding: 20px 0 0 60px;
-  margin: 40px 0px;
+  margin: 60px 0px;
   font-size: 80px;
   font-family: 'Inter Tight', sans-serif;
   font-weight: 400;
