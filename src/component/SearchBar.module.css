@@ -26,6 +26,7 @@
   padding: 19px 120px 19px 20px;
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
+  -webkit-appearance: none;
 }
 
 .search-btn {
