@@ -3,12 +3,13 @@ import SeachBar from './SearchBar'
 import ConcertEventList from './ConcertEventList'
 import SportEventList from './SportEventList'
 import ArtsTheatreEventList from './ArtsTheatreEventList'
-import { useRef, useState, createRef } from 'react'
+import { useRef, useState } from 'react'
 import axios from 'axios'
 import { BsChevronCompactDown } from "react-icons/bs";
 
 export default function Home() {
   const [eventData, setEventData] = useState([]);
+  const scrollRef = useRef();
 
   async function getEventData(enteredCity, enteredDate) {
     const date = enteredDate;
@@ -27,11 +28,15 @@ export default function Home() {
     };
   };
 
+  function scrollToBottom() {
+    scrollRef.current.scrollIntoView({ behaviour: 'smooth' });
+  }
+
   return (
     <>
       <SeachBar onSearch={getEventData} />
       <div className={classes['scroll-div']}>
-        <BsChevronCompactDown className={classes['scroll-icon']} />
+        <BsChevronCompactDown className={classes['scroll-icon']} onClick={scrollToBottom} />
       </div>
       <div className={classes['event-components']}>
         {eventData &&
@@ -40,12 +45,12 @@ export default function Home() {
         {eventData &&
           <SportEventList
             event={eventData} />}
-
+<div ref={scrollRef}></div>
         {eventData &&
           <ArtsTheatreEventList
-            event={eventData}/>}
-      </div>
+            event={eventData} />}
 
+      </div>
     </>
   )
 }
