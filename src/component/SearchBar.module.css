@@ -22,10 +22,6 @@
   border-top-left-radius: 50px;
 }
 
-.event-input {
-  padding: 20px 80px 20px 20px;
-}
-
 .date-input {
   padding: 19px 120px 19px 20px;
   border-bottom-right-radius: 50px;
@@ -48,3 +44,37 @@
   cursor: pointer;
 }
 
+@media only screen and (max-width: 675px) {
+  .city-input {
+    padding: 15px;
+    border-radius: 50px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+  }
+  .date-input {
+    padding: 15px;
+    border-radius: 50px;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 70px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 50px;
+  }
+  .search-btn {
+    font-family: 'Inter Tight', sans-serif;
+    background-color: #afffb5;
+    border-radius: 50px;
+    border: none;
+    padding: 10px 20px;
+    color: #1f1f1f;
+    right: 0px;
+    margin-top: 15px;
+  }
+  }

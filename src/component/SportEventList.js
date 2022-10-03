@@ -21,7 +21,7 @@ export default function SportEventList({ event }) {
           eventName={sport.name}
           time={sport.dates.start.localTime}
           url={sport.url}
-        // image={event.images}
+          image={sport.images[1].url}
         />
       })}
     </div>

@@ -2,8 +2,9 @@ import classes from './Events.module.css'
 
 export default function ConcertEvents(props) {
   return (
+    <a href={props.url} target="_blank">
     <div className={classes['event-container']}>
-      <img src='https://www.okayplayer.com/wp-content/uploads/2022/06/GettyImages-1392695968.jpg' />
+      <img src={props.image} />
       <div className={classes['event-details']}>
       <p className={classes['genre-music']}>{props.genre}</p>
         <h1>{props.eventName}</h1>
@@ -11,5 +12,6 @@ export default function ConcertEvents(props) {
         <p className={classes.time}>{props.date} @ {props.time}</p>
       </div>
     </div>
+    </a>
   )
 }

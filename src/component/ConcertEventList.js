@@ -3,6 +3,7 @@ import classes from './EventList.module.css'
 
 export default function ConcertEventList({ event }) {
   let concerts = [];
+
   event.map((e) => {
     if (e.classifications[0].segment.name === 'Music') {
       concerts.push(e);
@@ -22,7 +23,7 @@ export default function ConcertEventList({ event }) {
           eventName={concert.name}
           time={concert.dates.start.localTime}
           url={concert.url}
-        // image={event.images}
+        image={concert.images[1].url}
         />
       })}
     </div>

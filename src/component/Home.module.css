@@ -30,7 +30,7 @@
   }
 }
 
-.btn-thing {
+.scroll-div {
   text-align: center;
   padding-top: 220px;
 }
@@ -48,19 +48,16 @@
   transform: scale(1.2);
 }
 
-h1 {
-  padding: 20px 0 0 60px;
-  margin: 0;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: #1f1f1f;
+.event-components {
+  margin-top: 50px;
 }
 
-h2 {
-  padding: 20px 0 0 60px;
-  margin: 60px 0px;
-  font-size: 80px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 400;
-}
+@media only screen and (max-width: 675px) {
+  .scroll-div {
+    text-align: center;
+    padding-top: 140px;
+  }
+  .event-components {
+    margin-top: 40px;
+  }
+  }

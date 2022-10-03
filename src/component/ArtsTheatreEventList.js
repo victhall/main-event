@@ -11,6 +11,7 @@ export default function ArtsTheatreEventList({ event }) {
   });
 
   return (
+  
     <div className={classes['event-list__container']}>
       {artsTheatre.map((artTheatre) => {
         return <ArtsTheatreEvents
@@ -21,7 +22,7 @@ export default function ArtsTheatreEventList({ event }) {
           eventName={artTheatre.name}
           time={artTheatre.dates.start.localTime}
           url={artTheatre.url}
-        // image={event.images}
+          image={artTheatre.images[1].url}
         />
       })}
     </div>

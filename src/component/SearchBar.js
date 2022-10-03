@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import classes from './SearchBar.module.css';
 
 
 export default function SeachBar(props) {
   const [enteredCity, setEnteredCity] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
+  const scrollRef = useRef();
 
   const dateChangeHandler = function (e) {
     setEnteredDate(e.target.value);
@@ -20,6 +21,7 @@ export default function SeachBar(props) {
     props.onSearch(enteredCity, enteredDate);
     setEnteredCity('');
     setEnteredDate('');
+    scrollRef.current.scrollIntoView({ behaviour: 'smooth' });
   };
 
   return (
