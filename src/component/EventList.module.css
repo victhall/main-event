@@ -4,3 +4,11 @@
   width: 100vw;
   overflow: scroll;
 }
+
+.event-list__container-concert {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  overflow: scroll;
+  margin-top: 80px;
+}

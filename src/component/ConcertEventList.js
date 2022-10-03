@@ -11,7 +11,7 @@ export default function ConcertEventList({ event }) {
   });
 
   return (
-    <div className={classes['event-list__container']}>
+    <div className={classes['event-list__container-concert']}>
       {concerts.map((concert) => {
         return <ConcertEvents
         key={concert.id}
