@@ -1,3 +1,13 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -43,6 +53,8 @@
   background-size: 200%;
   animation: aurora 10s infinite;
   height: 100vh;
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 .aurora-inner {
@@ -50,6 +62,8 @@
   background-size: 200%;
   animation: aurora 7s infinite;
   height: 100vh;
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 @keyframes aurora {
@@ -71,35 +85,5 @@
 
   100% {
     background-position: left top;
-  }
-}
-
-h1 {
-  padding: 20px 0 0 60px;
-  margin: 0;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 600;
-  font-size: 17px;
-  color: #1f1f1f;
-}
-
-h2 {
-  padding: 20px 0 0 60px;
-  margin: 60px 0px;
-  font-size: 80px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: 400;
-}
-
-@media only screen and (max-width: 675px) {
-  h2 {
-    font-size: 55px;
-    padding: 20px 40px;
-    margin: 0 0 30px 0;
-  }
-
-  h1 {
-    margin: 0;
-    padding: 20px 40px;
   }
 }

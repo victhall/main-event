@@ -1,8 +1,8 @@
 import classes from './Home.module.css';
-import SeachBar from './SearchBar';
-import ConcertEventList from './ConcertEventList';
-import SportEventList from './SportEventList';
-import ArtsTheatreEventList from './ArtsTheatreEventList';
+import SeachBar from '../component/SearchBar';
+import ConcertEventList from '../component/ConcertEventList';
+import SportEventList from '../component/SportEventList';
+import ArtsTheatreEventList from '../component/ArtsTheatreEventList';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { BsChevronCompactDown } from "react-icons/bs";
@@ -37,10 +37,17 @@ export default function Home() {
 
   return (
     <>
-      <SeachBar onSearch={getEventData} />
-      <div className={classes['scroll-div']}>
-        <BsChevronCompactDown className={classes['scroll-icon']} onClick={scrollToBottom} />
-      </div>
+      <main>
+        <div>
+          <h1>Main Event.</h1>
+          <h2>Concerts. Sports.<br />Arts &amp; Theatre</h2>
+        </div>
+        <SeachBar onSearch={getEventData} />
+        <div className={classes['scroll-div']}>
+          <BsChevronCompactDown className={classes['scroll-icon']} onClick={scrollToBottom} />
+        </div>
+      </main>
+
       <div className={classes['event-components']}>
         <div ref={scrollRef}></div>
         {eventData &&

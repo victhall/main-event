@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;600&display=swap');
+
+.scroll-div {
+  text-align: center;
+  box-sizing: border-box;
+  background-position: relative;
+
+}
+
+.scroll-icon {
+  font-size: 100px;
+}
+
+.scroll-icon:hover {
+  cursor: pointer;
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.event-components {
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-left: 30px;
+  padding-top: 50px;
+  margin: 0;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  color: #1f1f1f;
+}
+
+h2 {
+  padding-left: 30px;
+  margin: 0;
+  font-size: clamp(3.125rem, 2.607rem + 2.2099vw, 4.375rem);
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  padding-top: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  height: 100vh;
+}
