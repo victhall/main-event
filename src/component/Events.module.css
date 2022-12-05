@@ -4,6 +4,7 @@ img {
   height: 270px;
   width: 300px;
   margin-bottom: 3px;
+  object-fit: cover;
 }
 
 .event-details {
